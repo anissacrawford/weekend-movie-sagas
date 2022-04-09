@@ -5,15 +5,18 @@ function MovieDetails() {
 
     const history = useHistory();
 
+    //Grab details and genres out of store
     const genres = useSelector(store => store.genres)
     const details = useSelector(store => store.details)
 
+    //Jump to home page 
     const home = () => {
         history.push('/');
     }
     
     return(
         <>
+            {/* Show details and genres on DOM */}
             <div>
                 <button onClick={home}>HOME</button>
                 <h1>{details.title}</h1>
