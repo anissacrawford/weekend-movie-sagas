@@ -29,8 +29,10 @@ function MovieDetails() {
             {/* Show details and genres on DOM */}
             <ThemeProvider theme={theme}>
                 <div>
-
+                    <header>
                     <h1>{details.title}</h1>
+                    </header>
+                    
                     <img src={details.poster}></img>
                     <h3>{details.description}</h3>
                     <h4> {genres.map((genre, i) => {
