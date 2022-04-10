@@ -2,3 +2,8 @@
     display : flex;
     flex-wrap: wrap;
 }
+
+header {
+    background-color:#88B04B;
+    padding: 20px;
+}

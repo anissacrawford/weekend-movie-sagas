@@ -13,35 +13,34 @@ function MovieDetails() {
 
     const theme = createTheme({
         palette: {
-          primary: {
-            main: '#88B04B'
-          }
+            primary: {
+                main: '#88B04B'
+            }
         }
-      })
-
+    })
 
     //Jump to home page 
     const home = () => {
         history.push('/');
     }
-    
-    return(
+
+    return (
         <>
             {/* Show details and genres on DOM */}
             <ThemeProvider theme={theme}>
-            <div>
-                
-                <h1>{details.title}</h1>
-                <img src={details.poster}></img>
-                <h3>{details.description}</h3>
-                <h4> {genres.map((genre, i) => {
+                <div>
+
+                    <h1>{details.title}</h1>
+                    <img src={details.poster}></img>
+                    <h3>{details.description}</h3>
+                    <h4> {genres.map((genre, i) => {
                         return (<p key={i}>{genre.name}</p>)
-                            })}
-                </h4>
-                <Button color="primary" variant="outlined" onClick={home}>HOME</Button>
-            </div>
+                    })}
+                    </h4>
+                    <Button color="primary" variant="outlined" onClick={home}>HOME</Button>
+                </div>
             </ThemeProvider>
-        </>
+        </> 
     )
 }
 
