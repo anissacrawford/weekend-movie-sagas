@@ -28,7 +28,7 @@ function MovieItem ({movie}) {
          <Grid item xs={12} s={6} md={3} lg={4}>
             <div key={movie.id} >
                 <h3>{movie.title}</h3>
-                <HtmlTooltip title="Click me" placement="left-start">
+                <HtmlTooltip title="Click me" placement="right-start">
                 <img onClick={handleDetails} src={movie.poster} alt={movie.title}/> 
                 </HtmlTooltip>  
             </div>
