@@ -11,6 +11,7 @@ function MovieDetails() {
     const genres = useSelector(store => store.genres)
     const details = useSelector(store => store.details)
 
+    //create green theme
     const theme = createTheme({
         palette: {
             primary: {

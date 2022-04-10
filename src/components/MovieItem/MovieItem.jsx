@@ -15,6 +15,7 @@ function MovieItem ({movie}) {
         history.push('/details');
     }
 
+    //adds tooltip
     const HtmlTooltip = withStyles((theme) => ({
         tooltip: {
           backgroundColor: '#88B04B',
@@ -24,7 +25,6 @@ function MovieItem ({movie}) {
 
     return( 
         <>
-        
          <Grid item xs={12} s={6} md={3} lg={4}>
             <div key={movie.id} >
                 <h3>{movie.title}</h3>
