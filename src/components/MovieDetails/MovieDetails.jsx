@@ -36,7 +36,7 @@ function MovieDetails() {
                     
                     <img className="centerImg" src={details.poster}></img>
                     <h3>{details.description}</h3>
-                    <h4> {genres.map((genre, i) => {
+                    <h4 className="genre"> {genres.map((genre, i) => {
                         return (<p key={i}>{genre.name}</p>)
                     })}
                     </h4>
