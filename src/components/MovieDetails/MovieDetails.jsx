@@ -35,11 +35,12 @@ function MovieDetails() {
                     </header>
                     
                     <img className="centerImg" src={details.poster}></img>
-                    <h3>{details.description}</h3>
+                    <h3 className="description">{details.description}</h3>
                     <h4 className="genre"> {genres.map((genre, i) => {
                         return (<p key={i}>{genre.name}</p>)
                     })}
                     </h4>
+
                     <Button color="primary" variant="contained" onClick={home}>HOME</Button>
                 </div>
             </ThemeProvider>

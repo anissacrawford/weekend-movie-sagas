@@ -35,3 +35,8 @@ header {
 .genre {
   color: grey;
 }
+
+.description {
+  margin-left: 200px;
+  margin-right: 200px;
+}
