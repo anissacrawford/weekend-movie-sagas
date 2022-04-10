@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import MovieItem from '../MovieItem/MovieItem';
 
+
 function MovieList() {
 
     const dispatch = useDispatch();
@@ -14,7 +15,8 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            
+            <h1>Movie List</h1>
             <section className="movies">
                 {movies.map(movie => {
                     return (

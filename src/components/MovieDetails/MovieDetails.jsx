@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 
 function MovieDetails() {
 
@@ -9,6 +11,15 @@ function MovieDetails() {
     const genres = useSelector(store => store.genres)
     const details = useSelector(store => store.details)
 
+    const theme = createTheme({
+        palette: {
+          primary: {
+            main: '#88B04B'
+          }
+        }
+      })
+
+
     //Jump to home page 
     const home = () => {
         history.push('/');
@@ -17,8 +28,9 @@ function MovieDetails() {
     return(
         <>
             {/* Show details and genres on DOM */}
+            <ThemeProvider theme={theme}>
             <div>
-                <button onClick={home}>HOME</button>
+                
                 <h1>{details.title}</h1>
                 <img src={details.poster}></img>
                 <h3>{details.description}</h3>
@@ -26,8 +38,9 @@ function MovieDetails() {
                         return (<p key={i}>{genre.name}</p>)
                             })}
                 </h4>
+                <Button color="primary" variant="outlined" onClick={home}>HOME</Button>
             </div>
-        
+            </ThemeProvider>
         </>
     )
 }
