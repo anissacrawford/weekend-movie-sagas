@@ -40,7 +40,7 @@ function MovieDetails() {
                         return (<p key={i}>{genre.name}</p>)
                     })}
                     </h4>
-                    <Button color="primary" variant="outlined" onClick={home}>HOME</Button>
+                    <Button color="primary" variant="contained" onClick={home}>HOME</Button>
                 </div>
             </ThemeProvider>
         </>
