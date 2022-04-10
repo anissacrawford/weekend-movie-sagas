@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { Button } from '@material-ui/core'
 
 function MovieDetails() {
 
@@ -30,10 +30,10 @@ function MovieDetails() {
             <ThemeProvider theme={theme}>
                 <div>
                     <header>
-                    <h1>{details.title}</h1>
+                        <h1>{details.title}</h1>
                     </header>
                     
-                    <img src={details.poster}></img>
+                    <img className="centerImg" src={details.poster}></img>
                     <h3>{details.description}</h3>
                     <h4> {genres.map((genre, i) => {
                         return (<p key={i}>{genre.name}</p>)
@@ -42,7 +42,7 @@ function MovieDetails() {
                     <Button color="primary" variant="outlined" onClick={home}>HOME</Button>
                 </div>
             </ThemeProvider>
-        </> 
+        </>
     )
 }
 
